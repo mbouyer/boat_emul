@@ -76,7 +76,7 @@ void nmea2000::Init() {
     }
     nmea2000_txP->setsrc(myaddress);
     nmea2000_txP->iso_address_claim.setdst(NMEA2000_ADDR_GLOBAL);
-    nmea2000_txP->iso_address_claim.setdata(uniquenumber, manufcode, 130, 120, deviceinstance, 0);
+    nmea2000_txP->iso_address_claim.setdata(uniquenumber, manufcode, 140, 60, deviceinstance, 0);
     nmea2000_txP->iso_address_claim.enabled = 1;
     nmea2000_txP->iso_address_claim.valid = 1;
     if (pthread_create(&thread, NULL, nmea2000::rx_thread, this)) {
